@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4728F61525859BAE00A084A6 /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4728F61425859BAE00A084A6 /* ReposViewController.swift */; };
 		4728F61B25859F9300A084A6 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4728F61A25859F9300A084A6 /* RepoCell.swift */; };
+		4728F6232585A38C00A084A6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4728F6222585A38C00A084A6 /* Extensions.swift */; };
 		4728F6292585AE2F00A084A6 /* RepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4728F6282585AE2F00A084A6 /* RepoViewModel.swift */; };
 		4728F62E2585B68800A084A6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4728F62D2585B68700A084A6 /* NetworkManager.swift */; };
 		4728F6332585C7D100A084A6 /* EndPointConstructable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4728F6322585C7D100A084A6 /* EndPointConstructable.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		4728F61425859BAE00A084A6 /* ReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewController.swift; sourceTree = "<group>"; };
 		4728F61A25859F9300A084A6 /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
+		4728F6222585A38C00A084A6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4728F6282585AE2F00A084A6 /* RepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewModel.swift; sourceTree = "<group>"; };
 		4728F62D2585B68700A084A6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		4728F6322585C7D100A084A6 /* EndPointConstructable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointConstructable.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		47A92704258566D000D7ED8C /* AmrockProject */ = {
 			isa = PBXGroup;
 			children = (
+				47BF91C32586A74500CCA42A /* Helpers */,
 				4728F6272585AE1500A084A6 /* ViewModels */,
 				4728F61925859F7500A084A6 /* Views */,
 				47A9274025859A0A00D7ED8C /* Models */,
@@ -214,6 +217,14 @@
 				47A9273B25859A0000D7ED8C /* Repo.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		47BF91C32586A74500CCA42A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4728F6222585A38C00A084A6 /* Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +368,7 @@
 				47A9273C25859A0000D7ED8C /* Repo.swift in Sources */,
 				4728F61B25859F9300A084A6 /* RepoCell.swift in Sources */,
 				4728F6332585C7D100A084A6 /* EndPointConstructable.swift in Sources */,
+				4728F6232585A38C00A084A6 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
