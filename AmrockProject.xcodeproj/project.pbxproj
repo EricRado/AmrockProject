@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4728F61B25859F9300A084A6 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4728F61A25859F9300A084A6 /* RepoCell.swift */; };
 		4728F6292585AE2F00A084A6 /* RepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4728F6282585AE2F00A084A6 /* RepoViewModel.swift */; };
 		47A92706258566D000D7ED8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A92705258566D000D7ED8C /* AppDelegate.swift */; };
 		47A92708258566D000D7ED8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A92707258566D000D7ED8C /* SceneDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4728F61A25859F9300A084A6 /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
 		4728F6282585AE2F00A084A6 /* RepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewModel.swift; sourceTree = "<group>"; };
 		47A92702258566D000D7ED8C /* AmrockProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmrockProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47A92705258566D000D7ED8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4728F61925859F7500A084A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4728F61A25859F9300A084A6 /* RepoCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		4728F6272585AE1500A084A6 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				4728F6272585AE1500A084A6 /* ViewModels */,
+				4728F61925859F7500A084A6 /* Views */,
 				47A9274025859A0A00D7ED8C /* Models */,
 				47A92705258566D000D7ED8C /* AppDelegate.swift */,
 				47A92707258566D000D7ED8C /* SceneDelegate.swift */,
@@ -285,6 +296,7 @@
 				47A92706258566D000D7ED8C /* AppDelegate.swift in Sources */,
 				47A92708258566D000D7ED8C /* SceneDelegate.swift in Sources */,
 				47A9273C25859A0000D7ED8C /* Repo.swift in Sources */,
+				4728F61B25859F9300A084A6 /* RepoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
