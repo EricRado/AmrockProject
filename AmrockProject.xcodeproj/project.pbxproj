@@ -16,9 +16,6 @@
 		4728F6392585C89A00A084A6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4728F6382585C89A00A084A6 /* HTTPMethod.swift */; };
 		4728F6422585C8E200A084A6 /* RepoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4728F6412585C8E200A084A6 /* RepoEndpoint.swift */; };
 		47A92706258566D000D7ED8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A92705258566D000D7ED8C /* AppDelegate.swift */; };
-		47A92708258566D000D7ED8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A92707258566D000D7ED8C /* SceneDelegate.swift */; };
-		47A9270A258566D000D7ED8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A92709258566D000D7ED8C /* ViewController.swift */; };
-		47A9270D258566D000D7ED8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A9270B258566D000D7ED8C /* Main.storyboard */; };
 		47A9270F258566D100D7ED8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47A9270E258566D100D7ED8C /* Assets.xcassets */; };
 		47A92712258566D100D7ED8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A92710258566D100D7ED8C /* LaunchScreen.storyboard */; };
 		47A9271D258566D100D7ED8C /* AmrockProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A9271C258566D100D7ED8C /* AmrockProjectTests.swift */; };
@@ -55,9 +52,6 @@
 		4728F6412585C8E200A084A6 /* RepoEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoEndpoint.swift; sourceTree = "<group>"; };
 		47A92702258566D000D7ED8C /* AmrockProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmrockProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47A92705258566D000D7ED8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		47A92707258566D000D7ED8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		47A92709258566D000D7ED8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		47A9270C258566D000D7ED8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47A9270E258566D100D7ED8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47A92711258566D100D7ED8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47A92713258566D100D7ED8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -160,9 +154,6 @@
 				47A9273A258599E100D7ED8C /* Network */,
 				47A92738258596F900D7ED8C /* ViewControllers */,
 				47A92705258566D000D7ED8C /* AppDelegate.swift */,
-				47A92707258566D000D7ED8C /* SceneDelegate.swift */,
-				47A92709258566D000D7ED8C /* ViewController.swift */,
-				47A9270B258566D000D7ED8C /* Main.storyboard */,
 				47A9270E258566D100D7ED8C /* Assets.xcassets */,
 				47A92710258566D100D7ED8C /* LaunchScreen.storyboard */,
 				47A92713258566D100D7ED8C /* Info.plist */,
@@ -343,7 +334,6 @@
 			files = (
 				47A92712258566D100D7ED8C /* LaunchScreen.storyboard in Resources */,
 				47A9270F258566D100D7ED8C /* Assets.xcassets in Resources */,
-				47A9270D258566D000D7ED8C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,11 +361,9 @@
 				4728F6422585C8E200A084A6 /* RepoEndpoint.swift in Sources */,
 				4728F62E2585B68800A084A6 /* NetworkManager.swift in Sources */,
 				4728F6292585AE2F00A084A6 /* RepoViewModel.swift in Sources */,
-				47A9270A258566D000D7ED8C /* ViewController.swift in Sources */,
 				4728F6392585C89A00A084A6 /* HTTPMethod.swift in Sources */,
 				47A92706258566D000D7ED8C /* AppDelegate.swift in Sources */,
 				4728F61525859BAE00A084A6 /* ReposViewController.swift in Sources */,
-				47A92708258566D000D7ED8C /* SceneDelegate.swift in Sources */,
 				47A9273C25859A0000D7ED8C /* Repo.swift in Sources */,
 				4728F61B25859F9300A084A6 /* RepoCell.swift in Sources */,
 				4728F6332585C7D100A084A6 /* EndPointConstructable.swift in Sources */,
@@ -416,14 +404,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		47A9270B258566D000D7ED8C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				47A9270C258566D000D7ED8C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		47A92710258566D100D7ED8C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -559,6 +539,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RK6ET38AYF;
 				INFOPLIST_FILE = AmrockProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -578,6 +559,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RK6ET38AYF;
 				INFOPLIST_FILE = AmrockProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
