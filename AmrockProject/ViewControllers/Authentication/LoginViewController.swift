@@ -27,16 +27,21 @@ final class LoginViewController: UIViewController {
 		return button
 	}()
 
-	private let emailTextField: UITextField = {
+	private lazy var emailTextField: UITextField = {
 		let textField = UITextField()
+		textField.delegate = self
 		textField.translatesAutoresizingMaskIntoConstraints = false
+		textField.borderStyle = .roundedRect
 		textField.placeholder = "Email"
 		return textField
 	}()
 
-	private let passwordTextField: UITextField = {
+	private lazy var passwordTextField: UITextField = {
 		let textField = UITextField()
+		textField.delegate = self
 		textField.translatesAutoresizingMaskIntoConstraints = false
+		textField.isSecureTextEntry = true
+		textField.borderStyle = .roundedRect
 		textField.placeholder = "Password"
 		return textField
 	}()
@@ -48,6 +53,10 @@ final class LoginViewController: UIViewController {
 
 	private func setupUI() {
 		view.backgroundColor = .white
+
+		let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+		view.addGestureRecognizer(tap)
+
 		view.addSubview(emailTextField)
 		view.addSubview(passwordTextField)
 		view.addSubview(loginButton)
@@ -130,4 +139,11 @@ final class LoginViewController: UIViewController {
 		presentAlertController(title: "Help", message: message)
 	}
 
+}
+
+extension LoginViewController: UITextFieldDelegate {
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		textField.resignFirstResponder()
+		return true
+	}
 }
