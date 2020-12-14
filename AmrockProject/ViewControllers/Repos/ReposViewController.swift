@@ -82,8 +82,16 @@ final class ReposViewController: UIViewController {
 		networkManager.request(RepoEndpoint.repo, completion: fetchReposCompletion)
     }
 
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		navigationController?.setToolbarHidden(true, animated: true)
+	}
+
 	func setupView() {
 		navigationItem.title = "Repos"
+		let logoutBarButtonItem = UIBarButtonItem(
+			title: "Logout", style: .plain, target: self, action: #selector(logout))
+		navigationItem.rightBarButtonItem = logoutBarButtonItem
 		view.backgroundColor = .white
 		view.addSubview(tableView)
 		view.addSubview(messageLabel)
@@ -99,6 +107,10 @@ final class ReposViewController: UIViewController {
 			messageLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
 			messageLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12),
 		])
+	}
+
+	@objc private func logout() {
+		dismiss(animated: true, completion: nil)
 	}
 
 }
