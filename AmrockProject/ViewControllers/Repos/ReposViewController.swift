@@ -33,6 +33,7 @@ final class ReposViewController: UIViewController {
 	private lazy var tableView: UITableView = {
 		let tableView = UITableView()
 		tableView.translatesAutoresizingMaskIntoConstraints = false
+		tableView.isHidden = true
 		tableView.rowHeight = UITableView.automaticDimension
 		tableView.estimatedRowHeight = 100
 		tableView.backgroundColor = .white
@@ -53,15 +54,20 @@ final class ReposViewController: UIViewController {
 		return label
 	}()
 
+	private let activityIndicator: UIActivityIndicatorView = {
+		let activityIndicator = UIActivityIndicatorView(style: .gray)
+		activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+		return activityIndicator
+	}()
+
 	private lazy var fetchReposCompletion: (Result<[Repo], Error>) -> Void = { [weak self] result in
 		guard let self = self else { return }
-		switch result {
-		case .success(let repos):
-			DispatchQueue.main.async {
+		DispatchQueue.main.async {
+			self.activityIndicator.stopAnimating()
+			switch result {
+			case .success(let repos):
 				self.tableViewState = .data(repos)
-			}
-		case .failure(let error):
-			DispatchQueue.main.async {
+			case .failure(let error):
 				self.tableViewState = .message(error.localizedDescription)
 			}
 		}
@@ -93,8 +99,19 @@ final class ReposViewController: UIViewController {
 			title: "Logout", style: .plain, target: self, action: #selector(logout))
 		navigationItem.rightBarButtonItem = logoutBarButtonItem
 		view.backgroundColor = .white
+
 		view.addSubview(tableView)
 		view.addSubview(messageLabel)
+		view.addSubview(activityIndicator)
+		activityIndicator.startAnimating()
+
+		NSLayoutConstraint.activate([
+			activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+			activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+			activityIndicator.widthAnchor.constraint(equalTo: view.widthAnchor),
+			activityIndicator.heightAnchor.constraint(equalTo: view.heightAnchor)
+		])
+
 		NSLayoutConstraint.activate([
 			tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
 			tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
