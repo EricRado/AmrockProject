@@ -38,6 +38,7 @@ final class ReposViewController: UIViewController {
 		tableView.backgroundColor = .white
 		tableView.register(RepoCell.self, forCellReuseIdentifier: RepoCell.identifier)
 		tableView.dataSource = self
+		tableView.delegate = self
 		return tableView
 	}()
 
@@ -120,5 +121,15 @@ extension ReposViewController: UITableViewDataSource {
 		let repoViewModel = RepoViewModel(repo: repo)
 		cell.configure(with: repoViewModel)
 		return cell
+	}
+}
+
+extension ReposViewController: UITableViewDelegate {
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+		guard case .data(let repos) = tableViewState else { return }
+		let repo = repos[indexPath.item]
+		let webViewController = WebViewController(title: repo.name, url: repo.htmlUrl)
+		navigationController?.pushViewController(webViewController, animated: true)
 	}
 }

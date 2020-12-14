@@ -24,6 +24,7 @@
 		47A9271D258566D100D7ED8C /* AmrockProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A9271C258566D100D7ED8C /* AmrockProjectTests.swift */; };
 		47A92728258566D100D7ED8C /* AmrockProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A92727258566D100D7ED8C /* AmrockProjectUITests.swift */; };
 		47A9273C25859A0000D7ED8C /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A9273B25859A0000D7ED8C /* Repo.swift */; };
+		47BF91C62586A85800CCA42A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF91C52586A85800CCA42A /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		47A92727258566D100D7ED8C /* AmrockProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmrockProjectUITests.swift; sourceTree = "<group>"; };
 		47A92729258566D100D7ED8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47A9273B25859A0000D7ED8C /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		47BF91C52586A85800CCA42A /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 		47A92738258596F900D7ED8C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				47BF91C42586A81E00CCA42A /* WebView */,
 				47A927392585970300D7ED8C /* Repos */,
 			);
 			path = ViewControllers;
@@ -225,6 +228,14 @@
 				4728F6222585A38C00A084A6 /* Extensions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		47BF91C42586A81E00CCA42A /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				47BF91C52586A85800CCA42A /* WebViewController.swift */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,6 +379,7 @@
 				47A9273C25859A0000D7ED8C /* Repo.swift in Sources */,
 				4728F61B25859F9300A084A6 /* RepoCell.swift in Sources */,
 				4728F6332585C7D100A084A6 /* EndPointConstructable.swift in Sources */,
+				47BF91C62586A85800CCA42A /* WebViewController.swift in Sources */,
 				4728F6232585A38C00A084A6 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
