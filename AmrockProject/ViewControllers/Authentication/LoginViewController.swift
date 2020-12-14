@@ -9,6 +9,9 @@ import UIKit
 
 final class LoginViewController: UIViewController {
 
+	private static let emailKey = "UserEmail"
+	private static let passwordKey = "UserPassword"
+
 	private lazy var loginButton: UIButton = {
 		let button = UIButton()
 		button.translatesAutoresizingMaskIntoConstraints = false
@@ -49,7 +52,28 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		setupUI()
+
+		// Display user's stored credentials
+		let (email, password) = loadUserCredentials()
+		emailTextField.text = email
+		passwordTextField.text = password
     }
+
+	private func loadUserCredentials() -> (String?, String?) {
+		let userDefaults = UserDefaults()
+		let email = userDefaults.string(forKey: LoginViewController.emailKey)
+		let password = userDefaults.string(forKey: LoginViewController.passwordKey)
+
+		return (email, password)
+	}
+
+	private func storeUserCredentials(email: String?, password: String?) {
+		guard let email = email, let password = password else { return }
+		// A secure way to store credentials is to use Keychain this approach is not secure
+		let userDefaults = UserDefaults()
+		userDefaults.set(email, forKey: LoginViewController.emailKey)
+		userDefaults.set(password, forKey: LoginViewController.passwordKey)
+	}
 
 	private func setupUI() {
 		view.backgroundColor = .white
@@ -124,6 +148,8 @@ final class LoginViewController: UIViewController {
 			presentAlertController(title: "Error", message: "Invalid password, please try again.")
 			return
 		}
+
+		storeUserCredentials(email: emailTextField.text, password: passwordTextField.text)
 
 		let reposViewController = ReposViewController(networkManager: NetworkManager())
 		let navigationController = UINavigationController(rootViewController: reposViewController)
